@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Chat</title>
+		<link rel="stylesheet" href="chat.css" />
+		<script src="https://moodle.iutv.univ-paris13.fr/img/bjs2/bjs2-js-lib.js"></script>
+	</head>
+	<body>
+		<h1>Chat</h1>
+		<div id="chat">
+			<div id="haut">
+				<input id="nom" value=""/><input id="changer-nom" type="button" value="Changer"/>
+			</div>
+			<div class="message">
+                <div class="nom"></div>
+                <div class="texte"></div>
+            </div>
+			<div id="bas">
+				<input id="texte" type="text" /><button id="envoyer" type="button"><span></span></button>
+			</div>
+		</div>
+		<p id="boutons">
+			<input id="rafraichir"    type="button" value="Rafraîchir"/>
+			<input id="reinitialiser" type="button" value="Réinitialiser"/>
+		</p>
+		<script src="chat.js"></script>
+	</body>
+</html>

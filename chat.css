@@ -1,0 +1,122 @@
+body{
+	background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(149,222,237,1) 100%); 
+	background-repeat: no-repeat;
+	padding: 2em;
+	font-family: sans;
+	color: #444;
+	background-attachment: fixed;
+}
+
+#haut{
+	padding:  .5em;
+}
+
+#nom {
+	padding: .58em;	
+	margin-right: .5em;
+}
+
+#chat{
+	position: relative;
+	background-color: white;
+	width: 30em;
+	border-radius: 10px;
+	box-shadow: 6px 6px 8px rgba(0,0,0,.3);
+}
+
+#chat::before  {
+	display: block;
+	content: '';
+	background-image: url('https://moodle.iutv.univ-paris13.fr/img/bjs2/chat2.svg');
+	width: 200px;
+	height: 135px;
+	position: absolute;
+	z-index: -1;
+	top: -10px;
+	left: 140px;
+	animation: 20s infinite alternate animchat;
+}
+
+@keyframes animchat{
+	0% {
+		top: -10px;
+	}
+	47% {
+		top: -10px;
+	}
+	50% {
+		top: -20px;
+	}
+	53% {
+		top: -10px;
+	}
+	95% {
+		transform: rotate(0deg);
+	}
+	97% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#messages{
+	background-color: #cfc;
+	padding: .5em;
+	max-height: 15em;
+	min-height: 10em;
+	overflow-y: scroll;
+}
+
+.message{
+	position: relative;
+	left: -1em;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	margin: 1em 1em;
+	padding: .5em;
+}
+
+.message.a-moi{
+	left: 1em;
+	background-color: #cff;
+	margin-left: 1em;
+	text-align: right;
+}
+
+.nom{
+	position: relative;
+	color:#aa5;
+	font-size: 12px;
+	top: -.3em;
+}
+
+.message.a-moi .nom{
+	display: none;
+}
+
+#bas{	
+	padding:  .5em;
+}
+
+#texte {
+	padding: .4em;
+	font-size: 100%;
+}
+
+#envoyer{
+	position: relative;
+	top: -1px;
+	padding: .58em;	
+}
+#envoyer>span {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-45deg);
+}
+#boutons {
+	margin-top: 2em;
+}
